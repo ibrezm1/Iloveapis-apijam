@@ -1,0 +1,313 @@
+{
+	"info": {
+		"_postman_id": "8fc6c6e9-16a5-44d0-9abd-01dda6706ab1",
+		"name": "APIJam-beers",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get beer with ID 11",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://{{org-name}}-test.apigee.net/v1/beers/11",
+					"protocol": "https",
+					"host": [
+						"{{org-name}}-test",
+						"apigee",
+						"net"
+					],
+					"path": [
+						"v1",
+						"beers",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get beer with ID 22 (auth)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://jinatedtugasal-eval-test.apigee.net/v1/beers/22?apikey=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+					"protocol": "https",
+					"host": [
+						"jinatedtugasal-eval-test",
+						"apigee",
+						"net"
+					],
+					"path": [
+						"v1",
+						"beers",
+						"22"
+					],
+					"query": [
+						{
+							"key": "apikey",
+							"value": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get beer with xml accept",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://jinatedtugasal-eval-test.apigee.net/v1/beers/2?apikey=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+					"protocol": "https",
+					"host": [
+						"jinatedtugasal-eval-test",
+						"apigee",
+						"net"
+					],
+					"path": [
+						"v1",
+						"beers",
+						"2"
+					],
+					"query": [
+						{
+							"key": "apikey",
+							"value": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get beer with transform",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://jinatedtugasal-eval-test.apigee.net/v1/beers/transform?apikey=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+					"protocol": "https",
+					"host": [
+						"jinatedtugasal-eval-test",
+						"apigee",
+						"net"
+					],
+					"path": [
+						"v1",
+						"beers",
+						"transform"
+					],
+					"query": [
+						{
+							"key": "apikey",
+							"value": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get beer with transform (post)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://jinatedtugasal-eval-test.apigee.net/v1/beers/transform?apikey=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+					"protocol": "https",
+					"host": [
+						"jinatedtugasal-eval-test",
+						"apigee",
+						"net"
+					],
+					"path": [
+						"v1",
+						"beers",
+						"transform"
+					],
+					"query": [
+						{
+							"key": "apikey",
+							"value": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get beer with notfound",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://jinatedtugasal-eval-test.apigee.net/v1/beers/?apikey=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+					"protocol": "https",
+					"host": [
+						"jinatedtugasal-eval-test",
+						"apigee",
+						"net"
+					],
+					"path": [
+						"v1",
+						"beers",
+						""
+					],
+					"query": [
+						{
+							"key": "apikey",
+							"value": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get mgmt API Oauth token",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic ZWRnZWNsaTplZGdlY2xpc2VjcmV0"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://login.apigee.com/oauth/token",
+					"protocol": "https",
+					"host": [
+						"login",
+						"apigee",
+						"com"
+					],
+					"path": [
+						"oauth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deploy proxy from one env to another",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://api.enterprise.apigee.com/v1/o/{{org-name}}/e/prod/apis/{{proxy-name}}/revisions/1/deployments",
+					"protocol": "https",
+					"host": [
+						"api",
+						"enterprise",
+						"apigee",
+						"com"
+					],
+					"path": [
+						"v1",
+						"o",
+						"{{org-name}}",
+						"e",
+						"prod",
+						"apis",
+						"{{proxy-name}}",
+						"revisions",
+						"1",
+						"deployments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "loadgenerator",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://{{org-name}}-test.apigee.net/v1/loadgenerator",
+					"protocol": "https",
+					"host": [
+						"{{org-name}}-test",
+						"apigee",
+						"net"
+					],
+					"path": [
+						"v1",
+						"loadgenerator"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
